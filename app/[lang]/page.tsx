@@ -9,6 +9,7 @@ import News from "@/components/features/home/news";
 import { getDictionary } from "@/dictionaries/get-dictionary";
 import { fetchCategories } from "@/services/category";
 import { LocaleEnum } from "@/types/locales";
+import Ads from "@/components/features/ads";
 
 async function Home({ params: { lang } }: { params: { lang: LocaleEnum } }) {
   const dictionary = await getDictionary(lang);
@@ -20,6 +21,7 @@ async function Home({ params: { lang } }: { params: { lang: LocaleEnum } }) {
       <HeroBanner />
       <Category dictionary={dictionary} categories={listCategories.data} />
       <ArticlePopular dictionary={dictionary} />
+      <Ads />
       <News dictionary={dictionary} />
       <AboutMyTeam dictionary={dictionary} />
     </>
