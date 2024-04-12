@@ -37,13 +37,17 @@ async function RootLayout({
 
   return (
     <html lang={params.lang} suppressHydrationWarning>
-      <Head>
+      <head>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-8742627001531739"
+        ></meta>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8742627001531739"
           crossOrigin="anonymous"
         ></script>
-      </Head>
+      </head>
       <body
         className={clsx(
           inter.variable,
