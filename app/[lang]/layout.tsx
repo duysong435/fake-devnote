@@ -13,7 +13,7 @@ import ThemeProvider from "@/providers/theme-provider";
 import { LocaleEnum } from "@/types/locales";
 
 import "./globals.scss";
-import { Html, Head } from "next/document";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -36,7 +36,7 @@ async function RootLayout({
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <Html lang={params.lang} suppressHydrationWarning>
+    <html lang={params.lang} suppressHydrationWarning>
       <Head>
         <meta
           name="google-adsense-account"
@@ -64,7 +64,7 @@ async function RootLayout({
           </div>
         </ThemeProvider>
       </body>
-    </Html>
+    </html>
   );
 }
 
