@@ -1,6 +1,7 @@
 import React from "react";
 
 import Card from "@/components/common/card";
+import Ads from "@/components/features/ads";
 import ActionButtons from "@/components/features/blogs/action-buttons";
 import BlogPost from "@/components/features/blogs/blog-post";
 import RelatedBlogs from "@/components/features/blogs/related-blogs";
@@ -30,6 +31,7 @@ async function BlogDetailPage({
         <aside className="hidden min-h-[500px] basis-72 flex-col gap-4 lg:flex">
           <Card title="OtherBlogs">
             <RelatedBlogs />
+            <Ads />
           </Card>
         </aside>
       </div>
