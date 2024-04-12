@@ -19,6 +19,21 @@ export default function Ads() {
       />
       <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       <div>Test Content</div>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8742627001531739"
+        crossOrigin="anonymous"
+      />
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block" }}
+        data-ad-format="fluid"
+        data-ad-layout-key="-6t+ed+2i-1n-4w"
+        data-ad-client="ca-pub-8742627001531739"
+        data-ad-slot="9460056960"
+      />
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <div>test 2</div>
     </div>
   );
 }
