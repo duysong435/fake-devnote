@@ -13,6 +13,7 @@ import ThemeProvider from "@/providers/theme-provider";
 import { LocaleEnum } from "@/types/locales";
 
 import "./globals.scss";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -36,6 +37,13 @@ async function RootLayout({
 
   return (
     <html lang={params.lang} suppressHydrationWarning>
+      <Head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8742627001531739"
+          crossOrigin="anonymous"
+        ></script>
+      </Head>
       <body
         className={clsx(
           inter.variable,
