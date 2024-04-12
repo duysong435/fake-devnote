@@ -13,7 +13,7 @@ import ThemeProvider from "@/providers/theme-provider";
 import { LocaleEnum } from "@/types/locales";
 
 import "./globals.scss";
-import Head from "next/head";
+import { Html, Head } from "next/document";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -36,8 +36,8 @@ async function RootLayout({
   const dictionary = await getDictionary(params.lang);
 
   return (
-    <html lang={params.lang} suppressHydrationWarning>
-      <head>
+    <Html lang={params.lang} suppressHydrationWarning>
+      <Head>
         <meta
           name="google-adsense-account"
           content="ca-pub-8742627001531739"
@@ -47,7 +47,7 @@ async function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8742627001531739"
           crossOrigin="anonymous"
         ></script>
-      </head>
+      </Head>
       <body
         className={clsx(
           inter.variable,
@@ -64,7 +64,7 @@ async function RootLayout({
           </div>
         </ThemeProvider>
       </body>
-    </html>
+    </Html>
   );
 }
 
